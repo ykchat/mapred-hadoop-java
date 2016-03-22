@@ -3,9 +3,9 @@ apply plugin:'application'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-group = 'mapreduce'
-mainClassName = 'mapreduce.IrisDriver'
-version = '0.1'
+group = 'mapred'
+mainClassName = 'mapred.IrisDriver'
+version = '0.0.1'
 
 tasks.withType(JavaCompile){
     options.encoding = 'UTF-8'
@@ -21,8 +21,8 @@ dependencies {
     )
 }
 
-run {
-    if (project.hasProperty('args')) {
-        args project.args.split('\\s+')
+jar {
+    manifest {
+        attributes 'Main-Class': 'mapred.IrisDriver'
     }
 }

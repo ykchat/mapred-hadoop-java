@@ -1,4 +1,4 @@
-package mapreduce;
+package mapred;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.FloatWritable;
@@ -15,7 +15,7 @@ public class IrisDriver {
         throws Exception {
 
         if (args.length != 2) {
-            System.out.printf("Usage: IrisDriver <input dir> <output dir>\n");
+            System.out.printf("This requires a minimum of 2 arguments.");
             System.exit(-1);
         }
 
